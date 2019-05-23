@@ -2,6 +2,7 @@
 
 :root {
   --color-light: #FFFEF2;
+  --color-dark: #303030;
 }
 
 body {
@@ -157,8 +158,8 @@ header a {
 }
 
 .explore-product:hover {
-  background-color: #303030;
-  border-color: #303030;
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
 }
 
 /* Tablet */
@@ -226,14 +227,85 @@ header a {
 
 /* Mobile */
 @media only screen and (max-width: 640px) {
+  header {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vw auto;
+    grid-template-areas:
+      "nav"
+      "header-content";
+  }
+
   .header-background {
     width: 100%;
-    height: 70vh;
+    height: 100vw;
     background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Mobile-640x640px.jpg");
     background-position: 50% 50%;
   }
 
   .nav-top {
     display: none;
+  }
+
+  .aesop-logo {
+    grid-area: nav;
+    margin-top: 27px;
+    padding-left: 20px;
+  }
+
+  .header-content {
+    grid-area: header-content;
+    max-width: 94%;
+    justify-content: center;
+    color: var(--color-dark);
+    float: none;
+    white-space: nowrap;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+
+  .header-content>h2 {
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 4.5vw;
+  }
+
+  .header-content>p {
+    width: 95%;
+    line-height: 1.7;
+    margin: 25px 0 0 0;
+    white-space: wrap;
+  }
+
+  .explore-product {
+    display: inline-flex;
+    margin-top: 30px;
+    width: 98%;
+    font-weight: bold;
+    height: 60px;
+    padding: 0 20px 0 20px;
+    background-color: transparent;
+    border: thin solid var(--color-dark);
+    color: var(--color-dark);
+    cursor: pointer;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .explore-product:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  main {
+    margin-top: 300px;
+  }
+
+  .chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 18px 16px 0;
   }
 }
