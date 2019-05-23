@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+:root {
+  --color-light: #FFFEF2;
+}
+
+body {
+  background-color: var(--color-light);
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.aesop {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 28px 81px 0;
+}
+
+.header-background {
+  width: 100%;
+  height: 85vh;
+  background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Desktop-2880x1400px.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+}
+
+header {
+  /* lower height later */
+  height: 100vh;
+  color: var(--color-light);
+  margin: 0 auto;
+}
+
+header a {
+  color: var(--color-light);
+}
+
+.nav-top {
+  display: inline-flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  font-size: 0.9em;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+  display: inline-flex;
+}
+
+.nav-left {
+  margin-top: 40px;
+}
+
+.nav-right {
+  margin-top: 38px;
+  margin-right: 10px;
+}
+
+.nav-left>li {
+  margin-right: 25px;
+}
+
+.nav-right>li:first-of-type {
+  margin-right: 30px;
+}
+
+#cart {
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#cart:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.nav-option {
+  cursor: pointer;
+}
+
+.nav-option::after {
+  transition: width .25s ease-in-out;
+  background-color: var(--color-light);
+  content: "";
+  display: block;
+  margin-top: 2.5px;
+  height: 1px;
+  width: 0;
+}
+
+.nav-option:hover::after {
+  width: 100%;
+}
+
+.aesop-logo,
+.header-content {
+  margin-top: 140px;
+}
+
+.aesop-logo,
+.nav-left,
+.nav-right {
+  padding: 0 40px;
+}
+
+.aesop-logo {
+  display: inline-flex;
+  float: left;
+
+}
+
+.aesop-logo>h1 {
+  font-size: 2em;
+}
+
+.aesop-logo>span {
+  font-size: 0.4em;
+  align-self: flex-end;
+}
+
+.header-content {
+  float: left;
+  white-space: nowrap;
+  margin-left: 13%;
+}
+
+.header-content>h2 {
+  font-size: 2em;
+}
+
+.header-content>p {
+  margin-top: 40px;
+  line-height: 1.7;
+}
+
+.explore-product {
+  display: inline-flex;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  padding: 0 20px 0 20px;
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  cursor: pointer;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+.explore-product:hover {
+  background-color: #303030;
+  border-color: #303030;
+}
+
+/* Tablet */
+@media only screen and (max-width: 1025px) {
+  .header-background {
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Tablet-1400x1920px.jpg");
+    background-position: 100% 75%;
+  }
+
+  .nav-left {
+    margin-top: 38px;
+  }
+
+  .aesop-logo,
+  .nav-left,
+  .nav-right {
+    padding: 0 35px;
+  }
+
+  .aesop-logo {
+    margin-top: 115px;
+  }
+
+  .header-content {
+    margin-top: 107px;
+  }
+
+  .aesop-logo>h1 {
+    font-size: 1.5em;
+  }
+
+  .header-content>h2 {
+    font-size: 1.7em;
+  }
+
+  .header-content {
+    max-width: 410px;
+    white-space: wrap;
+    word-wrap: normal;
+    margin-left: 15%;
+  }
+
+  .header-content>p,
+  .header-content>h2 {
+    white-space: normal;
+  }
+
+  .header-content>h2 {
+    line-height: 1.5;
+  }
+
+  #p-break {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header-content {
+    max-width: 350px;
+    margin-left: 12%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 640px) {
+  .header-background {
+    width: 100%;
+    height: 70vh;
+    background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Mobile-640x640px.jpg");
+    background-position: 50% 50%;
+  }
+
+  .nav-top {
+    display: none;
+  }
+}
