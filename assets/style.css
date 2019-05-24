@@ -52,6 +52,10 @@ header a {
   justify-content: space-between;
 }
 
+.nav-top-sm {
+  display: none;
+}
+
 .nav-left,
 .nav-right {
   display: inline-flex;
@@ -227,6 +231,14 @@ header a {
 
 /* Mobile */
 @media only screen and (max-width: 640px) {
+  .chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 18px 16px 0;
+    z-index: 1;
+  }
+
   header {
     display: grid;
     overflow: hidden;
@@ -245,7 +257,47 @@ header a {
   }
 
   .nav-top {
-    display: none;
+    /* use for hamburger menu */
+    display: flex;
+    position: absolute;
+    top: -185px;
+    left: 0;
+    flex-flow: column nowrap;
+    font-size: 0.9em;
+    font-weight: bold;
+    justify-content: space-between;
+  }
+
+  .nav-top-sm {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 50px;
+    position: absolute;
+    font-size: 1.2em;
+    top: 0;
+    right: 20px;
+    margin-top: 30px;
+  }
+
+  #cart2 {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #cart2:hover {
+    transform: scale(1.2, 1.2);
+  }
+
+  header a {
+    color: var(--color-dark);
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+    color: var(--color-dark);
   }
 
   .aesop-logo {
@@ -254,10 +306,21 @@ header a {
     padding-left: 20px;
   }
 
+  .aesop-logo>span {
+    font-size: 0.3em;
+    padding-top: 15px;
+    align-self: flex-start;
+  }
+
+  .aesop-logo>h1>a {
+    color: var(--color-light);
+  }
+
   .header-content {
     grid-area: header-content;
     max-width: 94%;
     justify-content: center;
+    background-color: rgb(246, 245, 232);
     color: var(--color-dark);
     float: none;
     white-space: nowrap;
@@ -266,9 +329,10 @@ header a {
   }
 
   .header-content>h2 {
-    white-space: nowrap;
+    line-height: 1.2;
+    white-space: wrap;
     margin: 0 auto;
-    font-size: 4.5vw;
+    font-size: 1.5em;
   }
 
   .header-content>p {
@@ -300,12 +364,5 @@ header a {
 
   main {
     margin-top: 300px;
-  }
-
-  .chat {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 0 18px 16px 0;
   }
 }
