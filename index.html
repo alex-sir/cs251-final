@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aesop</title>
-  <link rel="stylesheet" href="./assets/reset.css">
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
   <div class="aesop">
-    <a href="#"><img class="chat" src="./assets/img/live-chat-icon.svg" alt="Live chat"></a>
+    <a href="#"><img class="chat" src="assets/img/live-chat-icon.svg" alt="Live chat"></a>
     <div class="header-background">
       <header>
         <nav>
@@ -28,10 +29,27 @@
               <li id="cart">&#9679;</li>
             </span>
           </ul>
-          <ul class="nav-top-sm">
-            <li id="cart2">&#9679;</li>
-            <li class="hamburger">-</li>
-          </ul>
+          <div class="nav-top-sm">
+            <span id="cart2">&#9679;</span>
+            <span class="open-slide">
+              <a href="#">
+                <svg width="20" height="20">
+                  <path d="M0,5 30,5" stroke="#FFF" stroke-width="2" />
+                  <path d="M0,14 30,14" stroke="#FFF" stroke-width="2" />
+                </svg>
+              </a>
+            </span>
+          </div>
+          <div id="hamburger-menu" class="hamburger-nav">
+            <a href="#" class="btn-close">&times;</a>
+            <div class="hamburger-links">
+              <a href="#">Shop</a>
+              <a href="#">Read</a>
+              <a href="#">Visit</a>
+              <a href="#">Search</a>
+              <a href="#">Login</a>
+            </div>
+          </div>
         </nav>
         <div class="aesop-logo">
           <h1 title="Aesop logo"><a href="#">Aēsop</a></h1>
@@ -59,13 +77,13 @@
       <section class="product-showcase">
         <ul class="product-images">
           <li>
-            <img src="" alt="Petitgrain Reviving Body Gel">
+            <img src="assets/img/Bottles/Aesop-Body-Avail-Body-Lotion-with-Sunscreen-SPF50-150mL-large.png" class="bottle" alt="Petitgrain Reviving Body Gel">
           </li>
           <li>
-            <img src="" alt="Blue Chamomile Facial Hydrating Masque">
+            <img src="assets/img/Bottles/Aesop-Body-Petitgrain-Reviving-Body-Gel-150mL-large.png" class="bottle" alt="Blue Chamomile Facial Hydrating Masque">
           </li>
           <li>
-            <img src="" alt="Avail Body Lotion with Sunscreen">
+            <img src="assets/img/Bottles/Aesop-Skin-Avail-Facial-Lotion-with-Sunscreen-50-8g-Large-782x796px.png" class="bottle" alt="Avail Body Lotion with Sunscreen">
           </li>
         </ul>
         <hr>
@@ -162,6 +180,8 @@
       <span>United States</span>
     </div>
   </div>
+  <!-- scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

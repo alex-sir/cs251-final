@@ -26,7 +26,7 @@ body {
 .header-background {
   width: 100%;
   height: 85vh;
-  background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Desktop-2880x1400px.jpg");
+  background-image: url("../img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Desktop-2880x1400px.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80% 50%;
@@ -52,7 +52,10 @@ header a {
   justify-content: space-between;
 }
 
-.nav-top-sm {
+.nav-top-sm,
+.side-nav,
+.hamburger-links,
+.btn-close {
   display: none;
 }
 
@@ -166,12 +169,16 @@ header a {
   border-color: var(--color-dark);
 }
 
+main {
+  margin-top: 10vh;
+}
+
 /* Tablet */
 @media only screen and (max-width: 1025px) {
   .header-background {
     width: 100%;
     height: 100%;
-    background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Tablet-1400x1920px.jpg");
+    background-image: url("../img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Tablet-1400x1920px.jpg");
     background-position: 100% 75%;
   }
 
@@ -252,20 +259,8 @@ header a {
   .header-background {
     width: 100%;
     height: 100vw;
-    background-image: url("./img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Mobile-640x640px.jpg");
+    background-image: url("../img/Aesop-Avail-Facial-Lotion-Homepage-Launch-Hero-Mobile-640x640px.jpg");
     background-position: 50% 50%;
-  }
-
-  .nav-top {
-    /* use for hamburger menu */
-    display: flex;
-    position: absolute;
-    top: -185px;
-    left: 0;
-    flex-flow: column nowrap;
-    font-size: 0.9em;
-    font-weight: bold;
-    justify-content: space-between;
   }
 
   .nav-top-sm {
@@ -279,9 +274,39 @@ header a {
     margin-top: 30px;
   }
 
+  .btn-close {
+    display: inline-block;
+  }
+
+  .hamburger-nav {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--color-light);
+    font-size: 2em;
+    overflow-x: hidden;
+  }
+
+  .hamburger-links {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .hamburger-nav>a {
+    color: var(--color-dark);
+    transition: 1s;
+  }
+
   #cart2 {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    z-index: 2;
   }
 
   #cart2:hover {
@@ -289,14 +314,6 @@ header a {
   }
 
   header a {
-    color: var(--color-dark);
-  }
-
-  .nav-left,
-  .nav-right {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-light);
     color: var(--color-dark);
   }
 
@@ -314,6 +331,11 @@ header a {
 
   .aesop-logo>h1>a {
     color: var(--color-light);
+    z-index: 2;
+  }
+
+  .nav-top {
+    display: none;
   }
 
   .header-content {
@@ -362,7 +384,8 @@ header a {
     color: var(--color-light);
   }
 
+  /* main content */
   main {
-    margin-top: 300px;
+    margin-top: 60vh;
   }
 }
