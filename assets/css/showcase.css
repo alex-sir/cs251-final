@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+.img-showcase {
+    width: 100%;
+}
+
+.explore-gifts {
+    display: inline-flex;
+    margin-top: 30px;
+    width: 200px;
+    height: 60px;
+    padding: 0 20px 0 20px;
+    background-color: transparent;
+    border: thin solid var(--color-dark);
+    color: var(--color-dark);
+    cursor: pointer;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.explore-gifts:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.shipping {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-areas: "shipping fathers-day";
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.shipping-title {
+    grid-area: shipping;
+    font-size: 30px;
+    padding: 100px 0;
+    width: 77%;
+}
+
+.shipping-fathers-day {
+    grid-area: fathers-day;
+    font-size: 16px;
+    padding: 100px 0;
+}
+
+.shipping-fathers-day>p {
+    width: 80%;
+    line-height: 1.7;
+}
+
+/* Fathers day promo image */
+@media only screen and (max-width: 640px) {
+    .img-showcase {
+        content: url("../img/Aesop-Fathers-Day-2019-Secondary-Mobile-640x640px.jpg");
+    }
+}
+
+/* Shipping promo */
+@media only screen and (max-width: 1025px) {
+    .shipping {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "shipping"
+            "fathers-day";
+        width: 60vw;
+    }
+
+    .shipping-title {
+        padding: 110px 0 0 0;
+        width: 77%;
+        white-space: nowrap;
+    }
+
+    .shipping-fathers-day {
+        padding: 0 0 50px 0;
+    }
+
+    .shipping-fathers-day>p {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .shipping {
+        grid-template-rows: 0.7fr 1fr;
+        width: 90vw;
+    }
+
+    .shipping-title {
+        font-size: 25px;
+    }
+
+    .shipping-fathers-day {
+        padding: 0 0 0 0;
+    }
+
+    .explore-gifts {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
