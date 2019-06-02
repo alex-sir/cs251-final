@@ -131,7 +131,6 @@ header a {
 
 .header-content {
   float: left;
-  white-space: nowrap;
   margin-left: 13%;
 }
 
@@ -165,6 +164,13 @@ header a {
 
 main {
   margin-top: 10vh;
+}
+
+@media only screen and (min-width: 1025px) {
+    .header-content {
+        white-space: wrap;
+        width: 31%;
+    }
 }
 
 /* Tablet */
@@ -216,10 +222,6 @@ main {
 
   .header-content>h2 {
     line-height: 1.5;
-  }
-
-  #p-break {
-    display: none;
   }
 }
 

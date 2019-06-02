@@ -1,0 +1,185 @@
+.product-showcase-container {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr 0.1fr;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas:
+        "products-info product1 product2"
+        "hr hr hr"
+        ". bottle-name1 bottle-name2";
+    width: 90vw;
+    margin: 0 auto;
+    padding: 100px 0 0;
+}
+
+.products-info {
+    display: flex;
+    flex-direction: column;
+    grid-area: products-info;
+}
+
+.products-info-description>h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.products-info-description>h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 25vw;
+}
+
+.products-info-description>p {
+    font-size: 14px;
+    width: 24vw;
+    line-height: 1.7;
+}
+
+.products-info-description {
+    margin-bottom: 70%;
+}
+
+.browse-formulations>a {
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.products-product1 {
+    grid-area: product1;
+    justify-self: center;
+    padding-right: 20px;
+}
+
+.products-product1>img,
+.products-product2>img {
+    width: 27vw;
+    height: 27vw;
+}
+
+.products-product2 {
+    grid-area: product2;
+    justify-self: center;
+    padding-right: 20px;
+}
+
+#products-hr {
+    grid-area: hr;
+    height: 1px;
+}
+
+.bottle-name1 {
+    grid-area: bottle-name1;
+    justify-self: center;
+}
+
+.bottle-name2 {
+    grid-area: bottle-name2;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 1025px) {
+    .product-showcase-container {
+        grid-template-rows: 150px 1fr 0.1fr 0.1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "products-info products-info"
+            "product1 product2"
+            "hr hr"
+            "bottle-name1 bottle-name2";
+    }
+
+    .products-info-description>h4 {
+        float: left;
+    }
+
+    .products-info-description>h2 {
+        width: 25vw;
+        float: left;
+        clear: both;
+        white-space: wrap;
+    }
+
+    .products-info-description>p {
+        width: 50vw;
+        float: right;
+    }
+
+    .products-info-description {
+        margin-bottom: 0;
+    }
+
+    .browse-formulations>a {
+        float: left;
+        padding-left: 44.5%;
+    }
+
+    .products-product1,
+    .products-product2 {
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .product-showcase-container {
+        grid-template-rows: 0.2fr 0.1fr 0.1fr 0.1fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "products-info"
+            "product1"
+            "hr"
+            "bottle-name1";
+    }
+
+    .products-info {
+        display: flex;
+        flex-direction: column;
+        grid-area: products-info;
+    }
+
+    .products-info-description>h4 {
+        float: none;
+        width: 100%;
+    }
+
+    .products-info-description>h2 {
+        width: 100%;
+        float: none;
+        clear: none;
+        white-space: wrap;
+    }
+
+    .products-info-description>p {
+        width: 100%;
+        float: none;
+    }
+
+    .products-info-description {
+        margin: 0;
+    }
+
+    .browse-formulations>a {
+        float: none;
+        padding: 0;
+    }
+
+    .products-info-description>h4,
+    .products-info-description>h2,
+    .products-info-description>p {
+        margin-bottom: 40px;
+    }
+
+    .products-product1 {
+        margin: 50px auto;
+    }
+
+    .products-product1>img {
+        width: 230px;
+        height: 270px;
+    }
+
+    .products-product2,
+    .bottle-name2 {
+        display: none;
+    }
+}

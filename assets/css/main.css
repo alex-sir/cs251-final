@@ -22,8 +22,8 @@
     margin: 30px 0 10vh 0;
 }
 
-.bottle-names>span {
-    font-size: .9vw;
+.bottle-name {
+    font-size: 13px;
     white-space: nowrap;
     opacity: 0;
     font-weight: bold;
@@ -39,20 +39,20 @@
         overflow-x: auto;
     }
 
-    .bottle-names>span {
+    .bottle-name {
         font-size: 1.3vw;
     }
 }
 
 /* Bottle names resize */
 @media only screen and (max-width: 900px) {
-    .bottle-names>span {
+    .bottle-name {
         font-size: 1.7vw;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .bottle-names>span {
+    .bottle-name {
         font-size: 2vw;
     }
 }
@@ -89,7 +89,7 @@
         margin-left: 0;
     }
 
-    .bottle-names>span {
+    .bottle-name {
         font-size: 14px;
         overflow: hidden;
         margin-bottom: 200px;
@@ -97,7 +97,7 @@
         display: none;
     }
 
-    .bottle-names>span:first-of-type {
+    .bottle-name:first-of-type {
         opacity: 1;
         overflow: visible;
         display: inline-block;
@@ -130,7 +130,7 @@
         margin-left: 0;
     }
 
-    .bottle-names>span {
+    .bottle-name {
         font-size: 14px;
         overflow: hidden;
         margin-bottom: 200px;
@@ -138,7 +138,7 @@
         display: none;
     }
 
-    .bottle-names>span:first-of-type {
+    .bottle-names>.bottle-name:first-of-type {
         width: 100vw;
         opacity: 1;
         overflow: hidden;
