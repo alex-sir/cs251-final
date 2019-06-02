@@ -3,11 +3,27 @@
 .product-images {
   width: 100%;
   display: inline-flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  overflow: hidden;
 }
 
 .bottle {
   width: 400px;
   height: 400px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.bottle-names {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 30px 0 10vh 0;
+}
+
+.bottle-names>span {
+  white-space: nowrap;
+  opacity: 0;
+  transition: all .3s;
 }
