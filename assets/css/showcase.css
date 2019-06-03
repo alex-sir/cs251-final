@@ -27,7 +27,7 @@
 
 .shipping {
     display: grid;
-    grid-template-rows: 100%;
+    grid-template-rows: 1fr;
     grid-template-columns: 0.8fr 1fr;
     grid-template-areas: "shipping fathers-day";
     width: 90vw;
