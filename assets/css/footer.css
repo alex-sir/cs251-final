@@ -1,0 +1,171 @@
+footer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr repeat(3, 0.5fr);
+    grid-template-areas:
+        "email contact-us about social";
+    width: 100vw;
+    border-top: thin solid var(--color-dark);
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.footer-email {
+    grid-area: email;
+    padding: 0 0 175px 50px;
+}
+
+.footer-email>p {
+    font-size: 14px;
+    margin: 0 0 25px;
+    width: 80%;
+    line-height: 1.7;
+}
+
+.footer-email>form {
+    padding: 35px 0 0;
+}
+
+.footer-email>form>input {
+    font-size: 1.3rem;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: thin solid var(--color-dark);
+    width: 80%;
+    padding-bottom: 5px;
+}
+
+.footer-contact-us {
+    grid-area: contact-us;
+}
+
+.footer-about {
+    grid-area: about;
+}
+
+.footer-social {
+    grid-area: social;
+}
+
+.footer-list>h4 {
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.footer-list-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list-options>a {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-dark);
+    padding-bottom: 15px;
+}
+
+/* language selector */
+.language-selector {
+    background-color: var(--color-dark);
+    padding: 30px 40px;
+}
+
+.copyright,
+.language {
+    font-size: 13px;
+    color: #CCC;
+}
+
+.language {
+    float: right;
+}
+
+/* large size */
+@media only screen and (max-width: 1025px) {
+    footer {
+        grid-template-rows: 0.55fr 1fr;
+        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-areas:
+            "email email email"
+            "contact-us about social";
+    }
+
+    .footer-email {
+        grid-area: email;
+        padding-bottom: 0;
+        border-bottom: thin solid var(--color-dark);
+    }
+
+    .footer-list {
+        padding: 20px 0 90px 40px;
+    }
+}
+
+/* mobile size */
+@media only screen and (max-width: 640px) {
+    footer {
+        grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "email"
+            "contact-us"
+            "about"
+            "social";
+    }
+
+    .footer-email {
+        grid-area: email;
+        padding: 0 0 50px 20px;
+        border-bottom: thin solid var(--color-dark);
+    }
+
+    .footer-email>p {
+        margin: 0 0 0;
+        padding-bottom: 20px;
+    }
+
+    .footer-email>p,
+    .footer-email>form>input {
+        width: 91%;
+    }
+
+    .footer-list {
+        padding: 0 20px;
+        font-size: 16px;
+        border-bottom: thin solid var(--color-dark);
+    }
+
+    .footer-list>h4 {
+        padding: 25px 0;
+    }
+
+    .footer-list-options {
+        display: none;
+    }
+
+    .language-selector {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .copyright,
+    .language {
+        font-size: 13px;
+        color: var(--color-light);
+        padding: 28px 20px;
+        color: #CCC;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    .language {
+        font-size: 15px;
+        float: none;
+        border-bottom: thin solid #CCC;
+    }
+}

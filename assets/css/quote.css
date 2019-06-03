@@ -14,3 +14,10 @@
 .quote>cite {
     font-size: 14px;
 }
+
+@media only screen and (max-width: 640px) {
+    .quote {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
