@@ -1,0 +1,16 @@
+.quote {
+    padding: 200px 34px;
+    width: 90vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quote>blockquote {
+    font-size: 30px;
+    width: 55%;
+    margin: 0 auto 30px auto;
+}
+
+.quote>cite {
+    font-size: 14px;
+}
