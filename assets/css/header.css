@@ -27,7 +27,6 @@ body {
 }
 
 header {
-  /* lower height later */
   height: 100vh;
   color: var(--color-light);
   margin: 0 auto;
